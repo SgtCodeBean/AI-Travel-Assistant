@@ -1,134 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saved Itineraries - My Travel Buddy</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/components/buttons.css">
-    <link rel="stylesheet" href="styles/components/item-lists.css">
-</head>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
+    <link rel="stylesheet" href="styles/components/item-lists.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header (Logo & Navigation) -->
     <header>
-        <div class="header-container">
-            <!-- Logo & App Name -->
-            <div class="logo-container">
-                <img src="logo.png" alt="AI Travel Assistant Logo">
-            </div>
-            <!-- Navigation Menu -->
-            <nav class="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="create.html">Plan Trip</a>
-                <a href="saved.html">Saved Itineraries</a>
-                <a href="explore.html">Explore</a>
-            </nav>
-            <!-- Profile Icon (Top Right) -->
-            <div class="profile-menu">
-                <img src="profile-icon.png" alt="User Profile" class="profile-icon">
-                <div class="dropdown-content">
-                    <a href="login.html">Sign In</a>
-                    <a href="register.html">Create Account</a>
-            </div>
+      <div class="header-container">
+        <!-- Logo & App Name -->
+        <div class="logo-container">
+          <img src="logo.png" alt="AI Travel Assistant Logo" />
         </div>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="create.html">Plan Trip</a>
+          <a href="saved.html">Saved Itineraries</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+        <!-- Profile Icon (Top Right) -->
+        <div class="profile-menu">
+          <img src="profile-icon.png" alt="User Profile" class="profile-icon" />
+          <div class="dropdown-content">
+            <a href="login.html">Sign In</a>
+            <a href="register.html">Create Account</a>
+          </div>
         </div>
+      </div>
     </header>
-    
+
     <!-- Main Content -->
     <main class="saved-itineraries">
-        <h2>Saved Itineraries</h2>
-        <div class="search-sort-filter-container">
-            <!-- Search Bar -->
-            <input type="text" id="search-bar" class="search-bar" placeholder="Search itineraries...">
-        
-            <!-- Sort Button -->
-            <button id="sort-btn" class="sort-btn">Sort ⬍</button>
-        
-            <!-- Filter Button -->
-            <button id="filter-btn" class="filter-btn">Filter ⛛</button>
-        </div>
-        <!-- Itineraries List -->
-        <ul class="itinerary-list">
-            <li class="itinerary-item public">
-                <div class="itinerary-info">
-                    <h3>Trip to Japan</h3>
-                    <p><b>🌍 Destination:</b> Tokyo, Kyoto, Osaka</p>
-                    <p><b>📅 Dates:</b> March 15 - March 30</p>
-                    <p><b>💰 Budget:</b> $2,500</p>
+      <h2>Saved Itineraries</h2>
+      <div class="search-sort-filter-container">
+        <!-- Search Bar -->
+        <input
+          type="text"
+          id="search-bar"
+          class="search-bar"
+          placeholder="Search itineraries..."
+        />
 
-                    <!-- Star Rating -->
-                    <div class="rating">
-                        <span class="stars">⭐⭐⭐⭐☆</span> 
-                        <span class="review-count">(24 reviews)</span>
-                    </div>
-                </div>
-                <div class="itinerary-actions">
-                    <a href="your-itinerary.html" class="view-btn">View</a>
-                    <button class="favorite-btn">❤️</button>
-                    <button class="delete-btn">🗑️</button>
-                </div>
-            </li>
+        <!-- Sort Button -->
+        <button id="sort-btn" class="sort-btn">Sort ⬍</button>
 
-            <li class="itinerary-item public">
-                <div class="itinerary-info">
-                    <h3>European Adventure</h3>
-                    <p><b>🌍 Destination:</b> Paris, Rome, Berlin</p>
-                    <p><b>📅 Dates:</b> July 10 - July 25</p>
-                    <p><b>💰 Budget:</b> $3,500</p>
+        <!-- Filter Button -->
+        <button id="filter-btn" class="filter-btn">Filter ⛛</button>
+      </div>
+      <!-- Itineraries List -->
+      <ul class="itinerary-list">
+        <li class="itinerary-item public">
+          <div class="itinerary-info">
+            <h3>Trip to Japan</h3>
+            <p><b>🌍 Destination:</b> Tokyo, Kyoto, Osaka</p>
+            <p><b>📅 Dates:</b> March 15 - March 30</p>
+            <p><b>💰 Budget:</b> $2,500</p>
 
-                    <!-- Star Rating -->
-                    <div class="rating">
-                        <span class="stars">⭐⭐⭐☆☆</span> 
-                        <span class="review-count">(24 reviews)</span>
-                    </div>
-                </div>
-                <div class="itinerary-actions">
-                    <a href="your-itinerary.html" class="view-btn">View</a>
-                    <button class="favorite-btn">❤️</button>
-                    <button class="delete-btn">🗑️</button>
-                </div>
-            </li>
+            <!-- Star Rating -->
+            <div class="rating">
+              <span class="stars">⭐⭐⭐⭐☆</span>
+              <span class="review-count">(24 reviews)</span>
+            </div>
+          </div>
+          <div class="itinerary-actions">
+            <a href="your-itinerary.html" class="view-btn">View</a>
+            <button class="favorite-btn">❤️</button>
+            <button class="delete-btn">🗑️</button>
+          </div>
+        </li>
 
-            <li class="itinerary-item private">
-                <div class="itinerary-info">
-                    <h3>Backpacking Southeast Asia</h3>
-                    <p><b>🌍 Destination:</b> Thailand, Vietnam, Indonesia</p>
-                    <p><b>📅 Dates:</b> September 5 - October 10</p>
-                    <p><b>💰 Budget:</b> $1,800</p>
-                </div>
-                <div class="itinerary-actions">
-                    <a href="your-itinerary.html" class="view-btn">View</a>
-                    <button class="favorite-btn">❤️</button>
-                    <button class="delete-btn">🗑️</button>
-                </div>
-            </li>
-        </ul>
+        <li class="itinerary-item public">
+          <div class="itinerary-info">
+            <h3>European Adventure</h3>
+            <p><b>🌍 Destination:</b> Paris, Rome, Berlin</p>
+            <p><b>📅 Dates:</b> July 10 - July 25</p>
+            <p><b>💰 Budget:</b> $3,500</p>
+
+            <!-- Star Rating -->
+            <div class="rating">
+              <span class="stars">⭐⭐⭐☆☆</span>
+              <span class="review-count">(24 reviews)</span>
+            </div>
+          </div>
+          <div class="itinerary-actions">
+            <a href="your-itinerary.html" class="view-btn">View</a>
+            <button class="favorite-btn">❤️</button>
+            <button class="delete-btn">🗑️</button>
+          </div>
+        </li>
+
+        <li class="itinerary-item private">
+          <div class="itinerary-info">
+            <h3>Backpacking Southeast Asia</h3>
+            <p><b>🌍 Destination:</b> Thailand, Vietnam, Indonesia</p>
+            <p><b>📅 Dates:</b> September 5 - October 10</p>
+            <p><b>💰 Budget:</b> $1,800</p>
+          </div>
+          <div class="itinerary-actions">
+            <a href="your-itinerary.html" class="view-btn">View</a>
+            <button class="favorite-btn">❤️</button>
+            <button class="delete-btn">🗑️</button>
+          </div>
+        </li>
+      </ul>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <!-- Navigation Links -->
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="create.html">Plan Trip</a>
-                <a href="explore.html">Explore</a>
-                <a href="saved.html">Saved Itineraries</a>
-            </div>
-
-            <!-- Privacy & Terms -->
-            <div class="footer-legal">
-                <a href="help.html">Help Center</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-
-            <!-- Copyright Info -->
-            <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
+      <div class="footer-container">
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="create.html">Plan Trip</a>
+          <a href="explore.html">Explore</a>
+          <a href="saved.html">Saved Itineraries</a>
         </div>
-    </footer>
 
-</body>
+        <!-- Privacy & Terms -->
+        <div class="footer-legal">
+          <a href="help.html">Help Center</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+
+        <!-- Copyright Info -->
+        <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

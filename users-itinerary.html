@@ -1,134 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Itinerary - My Travel Buddy</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/components/buttons.css">
-    <link rel="stylesheet" href="styles/components/sidebar.css">
-    <link rel="stylesheet" href="styles/components/itinerary.css">
-    <link rel="stylesheet" href="styles/components/item-lists.css">
-</head>
-<body class="itinerary-page">
-
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
+    <link rel="stylesheet" href="styles/components/sidebar.css" />
+    <link rel="stylesheet" href="styles/components/itinerary.css" />
+    <link rel="stylesheet" href="styles/components/item-lists.css" />
+  </head>
+  <body class="itinerary-page">
     <!-- Header (Logo & Navigation) -->
     <header>
-        <div class="header-container">
-            <!-- Logo & App Name -->
-            <div class="logo-container">
-                <img src="logo.png" alt="AI Travel Assistant Logo">
-            </div>
-            <!-- Navigation Menu -->
-            <nav class="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="create.html">Plan Trip</a>
-                <a href="saved.html">Saved Itineraries</a>
-                <a href="explore.html">Explore</a>
-            </nav>
-            <!-- Profile Icon (Top Right) -->
-            <div class="profile-menu">
-                <img src="profile-icon.png" alt="User Profile" class="profile-icon">
-                <div class="dropdown-content">
-                    <a href="login.html">Sign In</a>
-                    <a href="register.html">Create Account</a>
-            </div>
+      <div class="header-container">
+        <!-- Logo & App Name -->
+        <div class="logo-container">
+          <img src="logo.png" alt="AI Travel Assistant Logo" />
         </div>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="create.html">Plan Trip</a>
+          <a href="saved.html">Saved Itineraries</a>
+          <a href="explore.html">Explore</a>
+        </nav>
+        <!-- Profile Icon (Top Right) -->
+        <div class="profile-menu">
+          <img src="profile-icon.png" alt="User Profile" class="profile-icon" />
+          <div class="dropdown-content">
+            <a href="login.html">Sign In</a>
+            <a href="register.html">Create Account</a>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Sidebar -->
     <aside class="sidebar">
-        <h2>Trip Details</h2>
-        <ul class="sidebar-tabs">
-            <li><a href="#" class="active">📍 Itinerary</a></li>
-            <li><a href="#">💰 Pricing</a></li>
-            <li><a href="#">⚠️ Travel Advisories</a></li>
-            <li><a href="#">💡 Tips</a></li>
-        </ul>
-        <h2>Trip Actions</h2>
-        <ul class="sidebar-tabs">
-            <li><a href="#">💾 Save Itinerary</a></li>
-            <li><a href="#">⭐ Rate Itinerary</a></li>
-            <li><a href="#">💬 Comments</a></li>
-        </ul>
+      <h2>Trip Details</h2>
+      <ul class="sidebar-tabs">
+        <li><a href="#" class="active">📍 Itinerary</a></li>
+        <li><a href="#">💰 Pricing</a></li>
+        <li><a href="#">⚠️ Travel Advisories</a></li>
+        <li><a href="#">💡 Tips</a></li>
+      </ul>
+      <h2>Trip Actions</h2>
+      <ul class="sidebar-tabs">
+        <li><a href="#">💾 Save Itinerary</a></li>
+        <li><a href="#">⭐ Rate Itinerary</a></li>
+        <li><a href="#">💬 Comments</a></li>
+      </ul>
     </aside>
-    
+
     <!-- Main Content -->
     <main class="itinerary-content">
-        <div class="top-bar">
-            <div class="back-btn-container">
-                <a href="explore.html" class="back-btn">← Back</a>
-            </div>
-            <div class="menu-container">
-                <button id="menu-toggle" class="menu-toggle">☰ Trip Details</button>
-            </div>
+      <div class="top-bar">
+        <div class="back-btn-container">
+          <a href="explore.html" class="back-btn">← Back</a>
         </div>
-        <h2>Backpacking Through Europe ✈️</h2>
-        <h3><span class="stars">⭐⭐⭐☆☆</span></h3>
+        <div class="menu-container">
+          <button id="menu-toggle" class="menu-toggle">☰ Trip Details</button>
+        </div>
+      </div>
+      <h2>Backpacking Through Europe ✈️</h2>
+      <h3><span class="stars">⭐⭐⭐☆☆</span></h3>
 
-        <div class="itinerary-box">
-            <h3>📅 Day 1: <a href="#">Barcelona, Spain 🇪🇸</a></h3>
-            <ul>
-                <li><strong>Morning:</strong> Arrive in Barcelona and check into a hostel like <a href="#">Hostel One Ramblas</a>.</li>
-                <li><strong>Midday:</strong> Visit <a href="#">La Sagrada Familia</a> and <a href="#">Gothic Quarter</a>.</li>
-                <li><strong>Lunch:</strong> Try <a href="#">Paella</a> at <a href="#">La Boqueria Market</a>.</li>
-                <li><strong>Afternoon:</strong> Relax at <a href="#">Barceloneta Beach</a>.</li>
-                <li><strong>Evening:</strong> Walk <a href="#">La Rambla</a> and enjoy <a href="#">Sangria</a> at a rooftop bar.</li>
-            </ul>
-        </div>
+      <div class="itinerary-box">
+        <h3>📅 Day 1: <a href="#">Barcelona, Spain 🇪🇸</a></h3>
+        <ul>
+          <li>
+            <strong>Morning:</strong> Arrive in Barcelona and check into a
+            hostel like <a href="#">Hostel One Ramblas</a>.
+          </li>
+          <li>
+            <strong>Midday:</strong> Visit
+            <a href="#">La Sagrada Familia</a> and
+            <a href="#">Gothic Quarter</a>.
+          </li>
+          <li>
+            <strong>Lunch:</strong> Try <a href="#">Paella</a> at
+            <a href="#">La Boqueria Market</a>.
+          </li>
+          <li>
+            <strong>Afternoon:</strong> Relax at
+            <a href="#">Barceloneta Beach</a>.
+          </li>
+          <li>
+            <strong>Evening:</strong> Walk <a href="#">La Rambla</a> and enjoy
+            <a href="#">Sangria</a> at a rooftop bar.
+          </li>
+        </ul>
+      </div>
 
-        <div class="itinerary-box">
-            <h3>📅 Day 2: <a href="#">Nice, France 🇫🇷</a></h3>
-            <ul>
-                <li><strong>Morning:</strong> Flight/train to Nice, check-in at <a href="#">Villa Saint Exupéry</a>.</li>
-                <li><strong>Midday:</strong> Walk the <a href="#">Promenade des Anglais</a>, swim at the beach.</li>
-                <li><strong>Lunch:</strong> Enjoy a <a href="#">Salade Niçoise</a>.</li>
-                <li><strong>Afternoon:</strong> Visit <a href="#">Castle Hill</a> for stunning views.</li>
-            </ul>
-        </div>
+      <div class="itinerary-box">
+        <h3>📅 Day 2: <a href="#">Nice, France 🇫🇷</a></h3>
+        <ul>
+          <li>
+            <strong>Morning:</strong> Flight/train to Nice, check-in at
+            <a href="#">Villa Saint Exupéry</a>.
+          </li>
+          <li>
+            <strong>Midday:</strong> Walk the
+            <a href="#">Promenade des Anglais</a>, swim at the beach.
+          </li>
+          <li>
+            <strong>Lunch:</strong> Enjoy a <a href="#">Salade Niçoise</a>.
+          </li>
+          <li>
+            <strong>Afternoon:</strong> Visit <a href="#">Castle Hill</a> for
+            stunning views.
+          </li>
+        </ul>
+      </div>
 
-        <div class="itinerary-box">
-            <h3>📅 Day 3: <a href="#">Cinque Terre, Italy 🇮🇹</a></h3>
-            <ul>
-                <li><strong>Morning:</strong> Train to La Spezia, stay in <a href="#">Riomaggiore</a>.</li>
-                <li><strong>Midday:</strong> Eat fresh <a href="#">seafood pasta</a> by the sea.</li>
-                <li><strong>Afternoon:</strong> Hike between <a href="#">Cinque Terre</a> villages.</li>
-            </ul>
-        </div>
+      <div class="itinerary-box">
+        <h3>📅 Day 3: <a href="#">Cinque Terre, Italy 🇮🇹</a></h3>
+        <ul>
+          <li>
+            <strong>Morning:</strong> Train to La Spezia, stay in
+            <a href="#">Riomaggiore</a>.
+          </li>
+          <li>
+            <strong>Midday:</strong> Eat fresh <a href="#">seafood pasta</a> by
+            the sea.
+          </li>
+          <li>
+            <strong>Afternoon:</strong> Hike between
+            <a href="#">Cinque Terre</a> villages.
+          </li>
+        </ul>
+      </div>
 
-        <div class="itinerary-box">
-            <h3>📅 Day 4: <a href="#">Rome, Italy 🇮🇹</a></h3>
-            <ul>
-                <li><strong>Morning:</strong> Train to Rome, check-in at <a href="#">The Yellow Hostel</a>.</li>
-                <li><strong>Midday:</strong> Explore the <a href="#">Colosseum</a> and <a href="#">Roman Forum</a>.</li>
-                <li><strong>Evening:</strong> Visit <a href="#">Trevi Fountain</a> and enjoy <a href="#">Gelato</a>.</li>
-            </ul>
-        </div>
+      <div class="itinerary-box">
+        <h3>📅 Day 4: <a href="#">Rome, Italy 🇮🇹</a></h3>
+        <ul>
+          <li>
+            <strong>Morning:</strong> Train to Rome, check-in at
+            <a href="#">The Yellow Hostel</a>.
+          </li>
+          <li>
+            <strong>Midday:</strong> Explore the <a href="#">Colosseum</a> and
+            <a href="#">Roman Forum</a>.
+          </li>
+          <li>
+            <strong>Evening:</strong> Visit <a href="#">Trevi Fountain</a> and
+            enjoy <a href="#">Gelato</a>.
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <!-- Navigation Links -->
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="create.html">Plan Trip</a>
-                <a href="explore.html">Explore</a>
-                <a href="saved.html">Saved Itineraries</a>
-            </div>
-
-            <!-- Privacy & Terms -->
-            <div class="footer-legal">
-                <a href="help.html">Help Center</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-
-            <!-- Copyright Info -->
-            <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
+      <div class="footer-container">
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="create.html">Plan Trip</a>
+          <a href="explore.html">Explore</a>
+          <a href="saved.html">Saved Itineraries</a>
         </div>
-    </footer>
 
-</body>
+        <!-- Privacy & Terms -->
+        <div class="footer-legal">
+          <a href="help.html">Help Center</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+
+        <!-- Copyright Info -->
+        <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

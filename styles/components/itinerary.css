@@ -34,17 +34,22 @@ main.saved-itineraries {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) { /* Desktop mode */
+@media screen and (max-width: 768px) {
+
+    /* Desktop mode */
     .itinerary-page main {
-        margin-left: 0; /* Sidebar width */
+        margin-left: 0;
+        /* Sidebar width */
         padding-top: 0;
     }
 }
 
 .top-bar {
     display: flex;
-    justify-content: space-between; /* Ensures they are on opposite sides */
-    align-items: center; /* Aligns them vertically */
+    justify-content: space-between;
+    /* Ensures they are on opposite sides */
+    align-items: center;
+    /* Aligns them vertically */
     padding: 1em;
     width: 100%;
 }

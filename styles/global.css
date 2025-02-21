@@ -1,7 +1,7 @@
 /* =====================================================
    🎨 General Reset & Global Styles
    ===================================================== */
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,11 +19,14 @@ header {
     position: sticky;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Ensure it spans full width */
-    height: auto; /* Adjust height if needed */
+    width: 100%;
+    /* Ensure it spans full width */
+    height: auto;
+    /* Adjust height if needed */
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
+    /* Ensures it stays above other elements */
 }
 
 /* 📌 Flex container for header */
@@ -74,14 +77,15 @@ header {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures full viewport height */
+    min-height: 100vh;
+    /* Ensures full viewport height */
 }
 
 /* =====================================================
    📌 Main Sections
    ===================================================== */
-   main {
-    flex-grow: 1; 
+main {
+    flex-grow: 1;
     text-align: center;
     padding: 0.5em 1.25em;
 }
@@ -97,7 +101,7 @@ h2 {
 /* =====================================================
    🎯 Footer Section
    ===================================================== */
-   footer {
+footer {
     background: #0077b6;
     color: white;
     text-align: center;
@@ -111,7 +115,8 @@ h2 {
 }
 
 /* Footer Links */
-.footer-links, .footer-legal {
+.footer-links,
+.footer-legal {
     display: flex;
     justify-content: center;
     gap: 1.25em;
@@ -119,14 +124,16 @@ h2 {
     margin-bottom: 1.6em;
 }
 
-.footer-links a, .footer-legal a {
+.footer-links a,
+.footer-legal a {
     color: white;
     text-decoration: none;
     font-size: 1em;
     transition: 0.3s;
 }
 
-.footer-links a:hover, .footer-legal a:hover {
+.footer-links a:hover,
+.footer-legal a:hover {
     text-decoration: underline;
 }
 
@@ -140,7 +147,7 @@ h2 {
 /* ===========================
    🔹 Profile Menu (Top Right)
    =========================== */
-   .profile-menu {
+.profile-menu {
     position: relative;
     display: inline-block;
     margin-left: auto;
@@ -170,7 +177,7 @@ h2 {
 /* Dropdown Links */
 .dropdown-content a {
     color: #0077b6;
-    padding: 0.75em ;
+    padding: 0.75em;
     text-decoration: none;
     display: block;
     transition: 0.3s;
@@ -188,12 +195,14 @@ h2 {
 /* =====================================================
    🎯 Responsive Design for Mobile
    ===================================================== */
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
+
     /* Center the entire header content */
     header {
         flex-direction: column;
         text-align: center;
-        align-items: center; /* Ensure items are centered */
+        align-items: center;
+        /* Ensure items are centered */
         position: static;
     }
 
@@ -202,15 +211,21 @@ h2 {
         flex-direction: column;
         gap: 0.2em;
         margin-top: 0.2em;
-        width: 100%; /* Ensures full width */
-        align-items: center; /* Centers nav items */
+        width: 100%;
+        /* Ensures full width */
+        align-items: center;
+        /* Centers nav items */
     }
 
     /* Ensure navigation links take up full width */
     .nav-menu a {
-        display: block; /* Makes each link take full width */
-        text-align: center; /* Centers text inside each link */
-        width: 100%; /* Full width */
-        padding: 0.5em 0; /* More padding for touch-friendly buttons */
+        display: block;
+        /* Makes each link take full width */
+        text-align: center;
+        /* Centers text inside each link */
+        width: 100%;
+        /* Full width */
+        padding: 0.5em 0;
+        /* More padding for touch-friendly buttons */
     }
 }

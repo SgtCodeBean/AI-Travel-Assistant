@@ -4,7 +4,7 @@
 /* =====================================================
    🚀 Features Section
    ===================================================== */
-   .features {
+.features {
     background: #f8f9fa;
     padding: 3.125em 0;
 }
@@ -101,10 +101,11 @@
 /* =====================================================
    🎯 Responsive Design for Mobile
    ===================================================== */
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
+
     /* Ensure feature section also stacks nicely */
-    .feature-cards, 
-    .testimonial-cards, 
+    .feature-cards,
+    .testimonial-cards,
     .destinations {
         flex-direction: column;
         align-items: center;
