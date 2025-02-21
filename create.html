@@ -35,21 +35,21 @@
     
     <!-- Sidebar -->
     <aside id="chat-sidebar" class="sidebar">
-        <h2>My Trips</h2>
+        <h2>Chat History</h2>
         <button class="new-trip-btn">+ New Trip</button>
         <ul class="chat-history">
             <li>
-                <span class="trip-name">Trip to Japan</span>
+                <button class="chat-hist-btn"><span class="trip-name">Trip to Japan</span></button>
                 <div class="trip-actions">
-                    <button class="save-btn"><i class="save-icon">💾</i></button>
-                    <button class="delete-btn"><i class="delete-icon">🗑️</i></button>
+                    <button class="save-btn"><p class="save-icon">💾</p></button>
+                    <button class="delete-btn"><p class="delete-icon">🗑️</p></button>
                 </div>
             </li>
             <li>
-                <span class="trip-name">Europe Backpacking</span>
+                <button class="chat-hist-btn"><span class="trip-name">Europe Backpacking</span></button>
                 <div class="trip-actions">
-                    <button class="save-btn"><i class="save-icon">💾</i></button>
-                    <button class="delete-btn"><i class="delete-icon">🗑️</i></button>
+                    <button class="save-btn"><p class="save-icon">💾</p></button>
+                    <button class="delete-btn"><p class="delete-icon">🗑️</p></button>
                 </div>
             </li>
         </ul>
@@ -58,7 +58,7 @@
     <main>
         <!-- 🔹 Mobile Menu Toggle Button -->
         <div class="menu-container">
-            <button id="menu-toggle" class="menu-toggle">☰ My Trips</button>
+            <button id="menu-toggle" class="menu-toggle">☰ Chat History</button>
         </div>
 
         <!-- Chat Area -->
@@ -71,11 +71,14 @@
                     <select id="region" name="region">
                         <option value="any">Any</option>
                         <option value="europe">Europe</option>
+                        <option value="mid-east">Middle East</option>
                         <option value="asia">Asia</option>
+                        <option value="pacific">Pacific</option>
                         <option value="north-america">North America</option>
                         <option value="south-america">South America</option>
                         <option value="africa">Africa</option>
                         <option value="australia">Australia</option>
+                        <option value="antarctica">Antarctica</option>
                     </select>
 
                     <label for="budget">Budget ($):</label>

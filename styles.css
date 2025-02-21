@@ -16,7 +16,7 @@ header {
     color: white;
     padding: 0.9375em 1.875em;
     display: flex;
-    position: fixed;
+    position: sticky;
     align-items: center;
     justify-content: space-between;
     width: 100%; /* Ensure it spans full width */
@@ -43,7 +43,7 @@ header {
 }
 
 .logo-container img {
-    width: 5em;
+    width: 4em;
     height: auto;
 }
 
@@ -69,6 +69,64 @@ header {
 
 .nav-menu a:hover {
     text-decoration: underline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* =====================================================
+   📌 Main Sections
+   ===================================================== */
+   main {
+    flex-grow: 1; 
+    text-align: center;
+    padding: 0.5em 1.25em;
+}
+
+/* =====================================================
+   🎯 Footer Section
+   ===================================================== */
+   footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 0.125em solid #ddd;
+}
+
+.footer-container {
+    max-width: 68.75em;
+    margin: 0 auto;
+}
+
+/* Footer Links */
+.footer-links, .footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    flex-wrap: wrap;
+    margin-bottom: 1.6em;
+}
+
+.footer-links a, .footer-legal a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 0.9em;
+    margin-top: 1.6em;
+    opacity: 0.8;
 }
 
 /* ===========================
@@ -117,14 +175,6 @@ header {
 /* Show Dropdown on Hover */
 .profile-menu:hover .dropdown-content {
     display: block;
-}
-
-/* =====================================================
-   📌 Main Sections
-   ===================================================== */
-main {
-    text-align: center;
-    padding: 3.125em 1.25em;
 }
 
 /* =====================================================
@@ -225,64 +275,22 @@ main {
 }
 
 /* =====================================================
-   🎯 Footer Section
-   ===================================================== */
-footer {
-    background: #0077b6;
-    color: white;
-    text-align: center;
-    padding: 1.25em 0;
-    border-top: 0.125em solid #ddd;
-}
-
-.footer-container {
-    max-width: 68.75em;
-    margin: 0 auto;
-}
-
-/* Footer Links */
-.footer-links, .footer-legal {
-    display: flex;
-    justify-content: center;
-    gap: 1.25em;
-    flex-wrap: wrap;
-    margin-bottom: 1.6em;
-}
-
-.footer-links a, .footer-legal a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    transition: 0.3s;
-}
-
-.footer-links a:hover, .footer-legal a:hover {
-    text-decoration: underline;
-}
-
-/* Copyright */
-.copyright {
-    font-size: 0.9em;
-    margin-top: 1.6em;
-    opacity: 0.8;
-}
-
-/* =====================================================
    🎯 Responsive Design for Mobile
    ===================================================== */
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
     /* Center the entire header content */
     header {
         flex-direction: column;
         text-align: center;
         align-items: center; /* Ensure items are centered */
+        position: static;
     }
 
     /* Stack nav items vertically */
     .nav-menu {
         flex-direction: column;
-        gap: 1.6em;
-        margin-top: 1.6em;
+        gap: 0.2em;
+        margin-top: 0.2em;
         width: 100%; /* Ensures full width */
         align-items: center; /* Centers nav items */
     }
@@ -292,7 +300,7 @@ footer {
         display: block; /* Makes each link take full width */
         text-align: center; /* Centers text inside each link */
         width: 100%; /* Full width */
-        padding: 1em 0; /* More padding for touch-friendly buttons */
+        padding: 0.5em 0; /* More padding for touch-friendly buttons */
     }
 
     /* Ensure feature section also stacks nicely */
@@ -315,20 +323,17 @@ footer {
     left: 0;
     top: 0; /* Stick to the top */
     height: 100vh;
-    padding: 20px;
+    padding: 1.25em;
     transition: left 0.3s ease;
     z-index: 50;
 }
 
 .plan-trip-page main {
     margin-left: 15.625em; /* Prevent overlap with sidebar */
-    padding-top: 6.875em; /* Push text down (equal to header height) */
 }
 
-.sidebar h2,
-.sidebar .new-trip-btn,
-.sidebar .chat-history {
-    margin-top: 2.875em; /* Adjust the value as needed */
+.sidebar h2 {
+    margin-top: 3.875em; /* Adjust the value as needed */
 }
 
 /* Hide Sidebar on Mobile */
@@ -341,7 +346,7 @@ footer {
 /* Sidebar Header */
 .sidebar h2 {
     font-size: 1.4em;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375em;
 }
 
 /* New Trip Button */
@@ -361,22 +366,39 @@ footer {
     background: #f0f0f0;
 }
 
+.chat-hist-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 10px; /* Keep uniform padding */
+    
+    width: 150px; /* Ensures all buttons have the same width */
+    height: 40px; /* Ensures all buttons have the same height */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: 5px 0;
+}
+
 /* Trip History List */
 /* Ensure the chat history container uses flexbox */
 .chat-history li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
 }
 
 /* Flex container for buttons */
 .trip-actions {
     display: flex; /* Ensures buttons stay in a row */
-    gap: 8px; /* Space between buttons */
+    gap: 0.5em; /* Space between buttons */
 }
 
 /* Save & Delete Buttons */
@@ -411,23 +433,30 @@ footer {
    =========================== */
 .menu-container {
     text-align: left;
-    padding: 15px;
+    padding: 0.9375em;
 }
 
 .menu-toggle {
     background: #0077b6;
     color: white;
     border: none;
-    padding: 12px 16px;
+    padding: 0.75em 1em;
     font-size: 1.2em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     display: none; /* Hidden on desktop */
+}
+
+@media screen and (max-width: 768px) { /* Desktop mode */
+    .plan-trip-page main {
+        margin-left: 0; /* Sidebar width */
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 768px) { /* Desktop mode */
     .plan-trip-page main {
-        margin-left: 270px; /* Sidebar width */
+        margin-left: 16.875; /* Sidebar width */
     }
 }
 
@@ -442,39 +471,39 @@ footer {
    🔹 Chat Area Styles
    =========================== */
 .chat-area {
-    max-width: 800px;
+    max-width: 50em;
     margin: auto;
-    padding: 20px;
+    padding: 1.25em;
 }
 
 .chat-messages {
     background: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    min-height: 200px;
+    padding: 0.9375em;
+    border-radius: 0.3125em;
+    min-height: 12.5em;
 }
 
 /* Chat Input */
 .chat-input {
     display: flex;
-    margin-top: 10px;
+    margin-top: 1.6em;
 }
 
 .chat-input input {
     flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 1.6em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
 }
 
 .btn-send {
     background: #0077b6;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 1.6em 0.9375em;
     cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
+    border-radius: 0.3125em;
+    margin-left: 1.6em;
 }
 
 /* ===========================
@@ -482,28 +511,28 @@ footer {
    =========================== */
 .trip-preferences {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 1.25em;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
 }
 
 .trip-preferences h2 {
-    margin-bottom: 10px;
+    margin-bottom: 1.6em;
 }
 
 .trip-preferences label {
     display: block;
-    margin-top: 10px;
+    margin-top: 1.6em;
 }
 
 .trip-preferences input,
 .trip-preferences select,
 .trip-preferences textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 0.3125em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
 }
 
 /* Submit Button */
@@ -511,23 +540,23 @@ footer {
     background: #0077b6;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 1.6em 0.9375em;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 0.3125em;
+    margin-top: 1.6em;
 }
 
 /* Main Section */
 main.saved-itineraries {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 50em;
+    margin: 2.5em auto;
+    padding: 1.25em;
     text-align: center;
 }
 
 h2 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 /* Itinerary List */
@@ -541,16 +570,16 @@ h2 {
     justify-content: space-between;
     align-items: center;
     background: #f8f9fa;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.9375em;
+    margin-bottom: 0.9375em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
 }
 
 /* Itinerary Info */
 .itinerary-info h3 {
     font-size: 1.5em;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
 }
 
 .itinerary-info p {
@@ -560,15 +589,15 @@ h2 {
 
 /* Public Itineraries with Ratings */
 .itinerary-item.public {
-    border-left: 5px solid gold;
-    padding-left: 15px;
+    border-left: 0.3125em solid gold;
+    padding-left: 0.9375em;
 }
 
 /* Rating Display */
 .rating {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 0.3125em;
 }
 
 .stars {
@@ -578,22 +607,23 @@ h2 {
 
 .review-count {
     font-size: 0.9em;
-    margin-left: 5px;
+    margin-left: 0.3125em;
     color: #666;
 }
 
 /* Itinerary Actions */
 .itinerary-actions {
     display: flex;
-    gap: 10px;
+    margin-left: 1em;
+    gap: 1.6em;
 }
 
 .view-btn, .favorite-btn {
     background: white;
-    border: 2px solid #0077b6;
+    border: 0.125em solid #0077b6;
     color: #0077b6;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 0.5em 0.75em;
+    border-radius: 0.3125em;
     cursor: pointer;
     transition: 0.3s;
     font-size: 1em;
@@ -601,10 +631,10 @@ h2 {
 
 .itinerary-list .delete-btn {
     background: white;
-    border: 2px solid #0077b6;
+    border: 0.125em solid #0077b6;
     color: #0077b6;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 0.5em 0.75em;
+    border-radius: 0.3125em;
     cursor: pointer;
     transition: 0.3s;
     font-size: 1em;
