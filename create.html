@@ -67,19 +67,19 @@
             <div class="trip-preferences">
                 <h2>Plan Your Trip</h2>
                 <form action="#" method="POST">
-                    <label for="region">Preferred Region:</label>
-                    <select id="region" name="region">
-                        <option value="any">Any</option>
-                        <option value="europe">Europe</option>
-                        <option value="mid-east">Middle East</option>
-                        <option value="asia">Asia</option>
-                        <option value="pacific">Pacific</option>
-                        <option value="north-america">North America</option>
-                        <option value="south-america">South America</option>
-                        <option value="africa">Africa</option>
-                        <option value="australia">Australia</option>
-                        <option value="antarctica">Antarctica</option>
-                    </select>
+                    <label>Preferred Region(s):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="region[]" value="any"> Anywhere</label>
+                        <label><input type="checkbox" name="region[]" value="africa"> Africa</label>
+                        <label><input type="checkbox" name="region[]" value="antarctica"> Antarctica</label>
+                        <label><input type="checkbox" name="region[]" value="asia"> Asia</label>
+                        <label><input type="checkbox" name="region[]" value="australia"> Australia</label>
+                        <label><input type="checkbox" name="region[]" value="europe"> Europe</label>
+                        <label><input type="checkbox" name="region[]" value="mid-east"> Middle East</label>
+                        <label><input type="checkbox" name="region[]" value="north-america"> North America</label>
+                        <label><input type="checkbox" name="region[]" value="pacific"> Pacific</label>
+                        <label><input type="checkbox" name="region[]" value="south-america"> South America</label>
+                    </div>
 
                     <label for="budget">Budget ($):</label>
                     <input type="number" id="budget" name="budget" placeholder="Enter your budget">
@@ -97,7 +97,7 @@
                     <label for="custom-preferences">Custom Preferences:</label>
                     <textarea id="custom-preferences" name="custom-preferences" rows="3" placeholder="Tell us what you want from your trip..."></textarea>
 
-                    <button type="submit" class="btn-primary">Generate Itinerary</button>
+                    <button type="submit" class="btn-primary"><b>Generate Itinerary</b></button>
                 </form>
             </div>
 
@@ -121,7 +121,7 @@
             <!-- Navigation Links -->
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="create.html">Start Planning</a>
+                <a href="create.html">Plan Trip</a>
                 <a href="explore.html">Explore</a>
                 <a href="saved.html">Saved Itineraries</a>
             </div>
