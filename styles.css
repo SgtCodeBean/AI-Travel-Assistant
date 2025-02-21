@@ -519,7 +519,7 @@ body {
 
 @media screen and (min-width: 768px) { /* Desktop mode */
     .plan-trip-page main {
-        margin-left: 16.875; /* Sidebar width */
+        margin-left: 16.875em; /* Sidebar width */
     }
 }
 
