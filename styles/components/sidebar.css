@@ -1,0 +1,56 @@
+/* ===========================
+   🔹 Sidebar Styles
+   =========================== */
+   .sidebar {
+    width: 15.625em; /* Sidebar width */
+    background: #0077b6;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0; /* Stick to the top */
+    height: 100vh;
+    padding: 1.25em;
+    transition: left 0.3s ease;
+    z-index: 50;
+    margin-top: 5em;
+}
+
+.plan-trip-page main {
+    margin-left: 15.625em; /* Prevent overlap with sidebar */
+}
+
+/* Hide Sidebar on Mobile */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Sidebar Header */
+.sidebar h2 {
+    font-size: 1.4em;
+    margin-bottom: 0.9375em;
+}
+
+/* Itinerary Sidebar customization */
+.sidebar-tabs {
+    list-style: none;
+}
+
+.sidebar-tabs li {
+    margin-bottom: 10px;
+}
+
+.sidebar-tabs a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-tabs a:hover, .sidebar-tabs a.active {
+    background: white;
+    color: #0077b6;
+}

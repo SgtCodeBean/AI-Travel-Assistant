@@ -1,0 +1,52 @@
+main.saved-itineraries {
+    max-width: 50em;
+    margin: 2.5em auto;
+    padding: 1.25em;
+    text-align: center;
+}
+
+.itinerary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 0.9375em;
+    margin-bottom: 0.9375em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+}
+
+/* Itinerary Info */
+.itinerary-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.3125em;
+}
+
+.itinerary-info p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Public Itineraries with Ratings */
+.itinerary-item.public {
+    border-left: 0.3125em solid gold;
+    padding-left: 0.9375em;
+}
+
+/* Rating Display */
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3125em;
+}
+
+.stars {
+    font-size: 1.2em;
+    color: #ffcc00;
+}
+
+.review-count {
+    font-size: 0.9em;
+    margin-left: 0.3125em;
+    color: #666;
+}

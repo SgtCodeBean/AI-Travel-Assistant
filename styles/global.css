@@ -1,0 +1,216 @@
+/* =====================================================
+   🎨 General Reset & Global Styles
+   ===================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ===========================
+   🔹 Header Section 
+   =========================== */
+header {
+    background: #0077b6;
+    color: white;
+    padding: 0.9375em 1.875em;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure it spans full width */
+    height: auto; /* Adjust height if needed */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+/* 📌 Flex container for header */
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 🔹 Logo & App Name */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 4em;
+    height: auto;
+}
+
+.app-name {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* 🔹 Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 1.25em;
+}
+
+/* 🔹 Navigation Links */
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: .625em .9375em;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* =====================================================
+   📌 Main Sections
+   ===================================================== */
+   main {
+    flex-grow: 1; 
+    text-align: center;
+    padding: 0.5em 1.25em;
+}
+
+/* =====================================================
+   📌 h2 Header Sections
+   ===================================================== */
+h2 {
+    font-size: 2em;
+    margin-bottom: 1.25em;
+}
+
+/* =====================================================
+   🎯 Footer Section
+   ===================================================== */
+   footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 0.125em solid #ddd;
+}
+
+.footer-container {
+    max-width: 68.75em;
+    margin: 0 auto;
+}
+
+/* Footer Links */
+.footer-links, .footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    flex-wrap: wrap;
+    margin-bottom: 1.6em;
+}
+
+.footer-links a, .footer-legal a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 0.9em;
+    margin-top: 1.6em;
+    opacity: 0.8;
+}
+
+/* ===========================
+   🔹 Profile Menu (Top Right)
+   =========================== */
+   .profile-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+/* Profile Icon */
+.profile-icon {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* 🔽 Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 9.375em;
+    box-shadow: 0em .25em .5em rgba(0, 0, 0, 0.2);
+    border-radius: .3125em;
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: #0077b6;
+    padding: 0.75em ;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.profile-menu:hover .dropdown-content {
+    display: block;
+}
+
+/* =====================================================
+   🎯 Responsive Design for Mobile
+   ===================================================== */
+   @media (max-width: 768px) {
+    /* Center the entire header content */
+    header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center; /* Ensure items are centered */
+        position: static;
+    }
+
+    /* Stack nav items vertically */
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.2em;
+        margin-top: 0.2em;
+        width: 100%; /* Ensures full width */
+        align-items: center; /* Centers nav items */
+    }
+
+    /* Ensure navigation links take up full width */
+    .nav-menu a {
+        display: block; /* Makes each link take full width */
+        text-align: center; /* Centers text inside each link */
+        width: 100%; /* Full width */
+        padding: 0.5em 0; /* More padding for touch-friendly buttons */
+    }
+}

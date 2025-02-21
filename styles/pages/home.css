@@ -1,0 +1,112 @@
+/* =====================================================
+   🏖️ Home Section
+   ===================================================== */
+/* =====================================================
+   🚀 Features Section
+   ===================================================== */
+   .features {
+    background: #f8f9fa;
+    padding: 3.125em 0;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 1.25em;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 18.75em;
+    padding: 1.25em;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.6em rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   ⭐ Testimonials Section
+   ===================================================== */
+.testimonials {
+    background: #ffffff;
+    padding: 3.125em 0;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 18.75em;
+    padding: 1.25em;
+    background: #0077b6;
+    color: white;
+    border-radius: 0.5em;
+    font-style: italic;
+}
+
+/* =====================================================
+   🌍 Featured Destinations
+   ===================================================== */
+.featured-destinations {
+    background: #f8f9fa;
+    padding: 3.125em 0;
+}
+
+.destinations {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    flex-wrap: wrap;
+}
+
+.destination {
+    width: 12.5em;
+    padding: 0.9375em;
+    background: white;
+    border: 0.125em solid #0077b6;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+/* =====================================================
+   📣 Call-to-Action Section
+   ===================================================== */
+.cta {
+    background: #0077b6;
+    color: white;
+    padding: 3.125em 0;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 0.3125em;
+    margin: 0.3125em;
+    transition: 0.3s;
+    background-color: white;
+    color: #0077b6;
+}
+
+/* =====================================================
+   🎯 Responsive Design for Mobile
+   ===================================================== */
+   @media (max-width: 768px) {
+    /* Ensure feature section also stacks nicely */
+    .feature-cards, 
+    .testimonial-cards, 
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,85 @@
+/* Trip History List */
+/* Ensure the chat history container uses flexbox */
+.chat-history li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===========================
+   🔹 Chat Area Styles
+   =========================== */
+   .chat-area {
+    max-width: 50em;
+    margin: auto;
+    padding: 1.25em;
+}
+
+.chat-messages {
+    background: #f8f9fa;
+    padding: 0.9375em;
+    border-radius: 0.3125em;
+    min-height: 12.5em;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    margin-top: 1.6em;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 1.6em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
+}
+
+/* ===========================
+   🔹 Trip Preferences Section
+   =========================== */
+   .trip-preferences {
+    background: #ffffff;
+    padding: 1.25em;
+    border-radius: 0.3125em;
+    margin-bottom: 1.25em;
+}
+
+.trip-preferences h2 {
+    margin-bottom: 1.6em;
+}
+
+.trip-preferences label {
+    display: block;
+    margin-top: 1.6em;
+}
+
+.trip-preferences input,
+.trip-preferences select,
+.trip-preferences textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3125em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em; /* Adjust spacing between checkboxes */
+    justify-content: space-between; /* Ensures equal spacing */
+    max-width: 30em; /* Prevents unnecessary stretching */
+    margin: 0 auto; /* Centers the group */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 5em;
+    white-space: wrap; /* Prevents text from wrapping */
+    text-align: left; /* Left-aligns the text */
+    justify-content: flex-start; /* Aligns checkbox and text to the left */
+    margin-left: auto;
+}
