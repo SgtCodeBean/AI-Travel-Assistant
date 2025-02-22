@@ -1,62 +1,83 @@
+/* Background Image (Generated from DALL.e)*/
+body {
+    background: url('../../images/travel-background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
 /* Login Container */
 .login-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 80vh; /* Center vertically */
-    padding: 1em;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
+/* Login Box */
 .login-box {
-    background: #ffffff;
+    background: #fff;
+    color: #333;
     padding: 2em;
-    border-radius: 0.5em;
-    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
-    max-width: 25em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 400px;
     width: 100%;
     text-align: center;
 }
 
 .login-box h2 {
-    margin-bottom: 1.5em;
-    font-size: 1.8em;
-    color: #0077b6;
+    margin-bottom: 1em;
 }
 
 .login-box label {
     display: block;
-    text-align: left;
     margin-bottom: 0.5em;
-    font-weight: bold;
-    color: #333;
+    text-align: left;
 }
 
 .login-box input {
     width: 100%;
     padding: 0.75em;
-    margin-bottom: 1.5em;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.3125em;
-    font-size: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
 }
 
-.login-box .btn-primary {
-    width: 100%;
-    padding: 0.75em;
-    font-size: 1.2em;
+/* Register Link */
+.register-link {
     margin-top: 1em;
 }
 
-.login-box .register-link {
-    margin-top: 1.5em;
-    font-size: 1em;
-}
-
-.login-box .register-link a {
-    color: #0077b6;
+.register-link a {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-.login-box .register-link a:hover {
+.register-link a:hover {
     text-decoration: underline;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.cta-section h3 {
+    margin-bottom: 0.5em;
+}
+
+.cta-section p {
+    margin-bottom: 0.5em; /* Reduced margin-bottom */
+}
+
+.cta-section .btn {
+    padding: 0.75em 1.5em;
+    font-size: 1.1em;
+    margin-top: 0.5em; /* Reduced margin-top */
 }
