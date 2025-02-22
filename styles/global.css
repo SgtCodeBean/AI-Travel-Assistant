@@ -8,11 +8,49 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* ===========================
-   🔹 Header Section 
-   =========================== */
+/* =====================================================
+   🎨 Global Variables
+   ===================================================== */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --border-radius: 0.3125em;
+    --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    --spacing-small: 0.5em;
+    --spacing-medium: 1.25em;
+    --spacing-large: 2.5em;
+}
+
+/* =====================================================
+   🎨 Utility Classes
+   ===================================================== */
+.text-center {
+    text-align: center;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.padding-medium {
+    padding: var(--spacing-medium);
+}
+
+.border-radius {
+    border-radius: var(--border-radius);
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* =====================================================
+   🔹 Header Section
+   ===================================================== */
+/* Header Styles */
 header {
-    background: #0077b6;
+    background: var(--primary-color);
     color: white;
     padding: 0.9375em 1.875em;
     display: flex;
@@ -20,16 +58,13 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* Ensure it spans full width */
     height: auto;
-    /* Adjust height if needed */
     top: 0;
     left: 0;
     z-index: 1000;
-    /* Ensures it stays above other elements */
 }
 
-/* 📌 Flex container for header */
+/* Flex container for header */
 .header-container {
     display: flex;
     align-items: center;
@@ -37,7 +72,7 @@ header {
     justify-content: space-between;
 }
 
-/* 🔹 Logo & App Name */
+/* Logo & App Name */
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -55,13 +90,13 @@ header {
     font-weight: bold;
 }
 
-/* 🔹 Navigation Menu */
+/* Navigation Menu */
 .nav-menu {
     display: flex;
     gap: 1.25em;
 }
 
-/* 🔹 Navigation Links */
+/* Navigation Links */
 .nav-menu a {
     text-decoration: none;
     color: white;
@@ -74,41 +109,68 @@ header {
     text-decoration: underline;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* Ensures full viewport height */
+/* =====================================================
+   🔹 Profile Menu (Top Right)
+   ===================================================== */
+/* Profile Menu Container */
+.profile-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
 }
 
-/* =====================================================
-   📌 Main Sections
-   ===================================================== */
-main {
-    flex-grow: 1;
-    text-align: center;
-    padding: 0.5em 1.25em;
+/* Profile Icon */
+.profile-icon {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-/* =====================================================
-   📌 h2 Header Sections
-   ===================================================== */
-h2 {
-    font-size: 2em;
-    margin-bottom: 1.25em;
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 9.375em;
+    box-shadow: 0em .25em .5em rgba(0, 0, 0, 0.2);
+    border-radius: .3125em;
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: var(--primary-color);
+    padding: 0.75em;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.profile-menu:hover .dropdown-content {
+    display: block;
 }
 
 /* =====================================================
    🎯 Footer Section
    ===================================================== */
+/* Footer Styles */
 footer {
-    background: #0077b6;
+    background: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1em 0;
     border-top: 0.125em solid #ddd;
 }
 
+/* Footer Container */
 .footer-container {
     max-width: 68.75em;
     margin: 0 auto;
@@ -144,65 +206,38 @@ footer {
     opacity: 0.8;
 }
 
-/* ===========================
-   🔹 Profile Menu (Top Right)
-   =========================== */
-.profile-menu {
-    position: relative;
-    display: inline-block;
-    margin-left: auto;
+/* =====================================================
+   🔹 Body & Main Content
+   ===================================================== */
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Profile Icon */
-.profile-icon {
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    cursor: pointer;
+/* Main Content Styles */
+main {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.5em 1.25em;
 }
 
-/* 🔽 Dropdown Menu */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 9.375em;
-    box-shadow: 0em .25em .5em rgba(0, 0, 0, 0.2);
-    border-radius: .3125em;
-    overflow: hidden;
-    z-index: 100;
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-    color: #0077b6;
-    padding: 0.75em;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show Dropdown on Hover */
-.profile-menu:hover .dropdown-content {
-    display: block;
+/* Heading Styles */
+h2 {
+    font-size: 2em;
+    margin-bottom: 1.25em;
 }
 
 /* =====================================================
    🎯 Responsive Design for Mobile
    ===================================================== */
 @media (max-width: 768px) {
-
     /* Center the entire header content */
     header {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        /* Ensure items are centered */
         position: static;
     }
 
@@ -212,20 +247,14 @@ footer {
         gap: 0.2em;
         margin-top: 0.2em;
         width: 100%;
-        /* Ensures full width */
         align-items: center;
-        /* Centers nav items */
     }
 
     /* Ensure navigation links take up full width */
     .nav-menu a {
         display: block;
-        /* Makes each link take full width */
         text-align: center;
-        /* Centers text inside each link */
         width: 100%;
-        /* Full width */
         padding: 0.5em 0;
-        /* More padding for touch-friendly buttons */
     }
 }

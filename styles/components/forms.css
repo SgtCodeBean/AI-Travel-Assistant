@@ -1,57 +1,50 @@
-/* Trip History List */
-/* Ensure the chat history container uses flexbox */
-.chat-history li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /* ===========================
    🔹 Chat Area Styles
    =========================== */
-   .chat-area {
+.chat-area {
     max-width: 50em;
     margin: auto;
-    padding: 1.25em;
+    padding: var(--spacing-medium);
+    width: 100%;
 }
 
 .chat-messages {
-    background: #f8f9fa;
+    background: var(--secondary-color);
     padding: 0.9375em;
-    border-radius: 0.3125em;
+    border-radius: var(--border-radius);
     min-height: 12.5em;
 }
 
 /* Chat Input */
 .chat-input {
     display: flex;
-    margin-top: 1.6em;
+    margin-top: var(--spacing-large);
 }
 
 .chat-input input {
     flex-grow: 1;
-    padding: 1.6em;
+    padding: var(--spacing-large);
     border: 0.0625em solid #ccc;
-    border-radius: 0.3125em;
+    border-radius: var(--border-radius);
 }
 
 /* ===========================
    🔹 Trip Preferences Section
    =========================== */
-   .trip-preferences {
+.trip-preferences {
     background: #ffffff;
-    padding: 1.25em;
-    border-radius: 0.3125em;
-    margin-bottom: 1.25em;
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-medium);
 }
 
 .trip-preferences h2 {
-    margin-bottom: 1.6em;
+    margin-bottom: var(--spacing-large);
 }
 
 .trip-preferences label {
     display: block;
-    margin-top: 1.6em;
+    margin-top: var(--spacing-large);
 }
 
 .trip-preferences input,
@@ -61,25 +54,42 @@
     padding: 0.5em;
     margin-top: 0.3125em;
     border: 0.0625em solid #ccc;
-    border-radius: 0.3125em;
+    border-radius: var(--border-radius);
 }
 
+/* Checkbox Group */
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em; /* Adjust spacing between checkboxes */
-    justify-content: space-between; /* Ensures equal spacing */
-    max-width: 30em; /* Prevents unnecessary stretching */
-    margin: 0 auto; /* Centers the group */
+    gap: 1.2em;
+    justify-content: space-between;
+    max-width: 30em;
+    margin: 0 auto;
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
     width: 5em;
-    white-space: wrap; /* Prevents text from wrapping */
-    text-align: left; /* Left-aligns the text */
-    justify-content: flex-start; /* Aligns checkbox and text to the left */
+    white-space: wrap;
+    text-align: left;
+    justify-content: flex-start;
     margin-left: auto;
+}
+
+/* Search, Sort, and Filter Container */
+.search-sort-filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    margin-right: 1em;
+    padding: 0.75em;
+    height: 2.5em;
 }

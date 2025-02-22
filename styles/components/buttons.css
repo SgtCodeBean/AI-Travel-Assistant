@@ -1,79 +1,101 @@
 /* =====================================================
+   📌 Base Button Styles
+   ===================================================== */
+   .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1em;
+    border: none;
+}
+
+/* =====================================================
    📌 Primary Buttons
    ===================================================== */
 .btn-primary {
-    background: #0077b6;
+    background: var(--primary-color);
     color: white;
-    border: none;
     padding: 0.8em 0.9375em;
-    cursor: pointer;
-    border-radius: 0.3125em;
-    margin-top: 1.6em;
-    text-wrap: wrap;
+    margin-top: var(--spacing-large);
     font-size: 1.1em;
 }
 
-/* New Trip Button */
+.btn-primary:hover {
+    background: #005f8a;
+}
+
+/* =====================================================
+   📌 New Trip Button
+   ===================================================== */
 .new-trip-btn {
     background: white;
-    color: #0077b6;
+    color: var(--primary-color);
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
     margin-bottom: 20px;
-    transition: 0.3s;
+    width: 110px; /* Fixed width */
+    height: 40px; /* Fixed height */
 }
 
 .new-trip-btn:hover {
     background: #f0f0f0;
 }
 
+/* =====================================================
+   📌 Chat History Button
+   ===================================================== */
 .chat-hist-btn {
     background: rgba(255, 255, 255, 0.2);
     color: white;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
     border-radius: 5px;
-    padding: 10px 10px;
-    /* Keep uniform padding */
-
-    width: 150px;
-    /* Ensures all buttons have the same width */
-    height: 40px;
-    /* Ensures all buttons have the same height */
-
-    display: flex;
+    padding: 10px;
+    width: 150px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    margin: 5px 0;
+    display: inline-flex; /* Ensure inline-flex for consistent sizing */
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    margin: 5px 0;
 }
 
-/* Flex container for buttons */
-.trip-actions {
+/* Remove bullet points from list items containing buttons */
+.chat-history li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Flex container for chat items */
+.chat-item {
     display: flex;
-    /* Ensures buttons stay in a row */
-    gap: 0.5em;
-    /* Space between buttons */
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Save & Delete Buttons */
+/* =====================================================
+   📌 Save & Delete Buttons
+   ===================================================== */
 .save-btn,
 .delete-btn {
     background: none;
-    border: none;
     color: white;
     font-size: 1.2em;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
+    display: inline-flex; /* Ensure inline-flex for consistent sizing */
     align-items: center;
-    /* Ensures icon aligns properly */
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.save-btn:hover {
+    color: #00ff00; /* Green for Save */
+}
+
+.delete-btn:hover {
+    color: #ff4444; /* Red for Delete */
 }
 
 .save-icon,
@@ -82,122 +104,67 @@
     margin-left: 4px;
 }
 
-/* Hover Effects */
-.save-btn:hover {
-    color: #00ff00;
-    /* Green for Save */
+/* =====================================================
+   📌 Itinerary Sidebar Customization
+   ===================================================== */
+.sidebar-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Ensure buttons are stacked vertically */
 }
 
-.delete-btn:hover {
-    color: #ff4444;
-    /* Red for Delete */
+.sidebar-tabs li {
+    margin-bottom: 10px;
 }
 
-/* ===========================
-   🔹 Menu Button (Mobile Only)
-   =========================== */
-.menu-container {
-    text-align: left;
-    padding: 0.9375em;
-}
-
-.menu-toggle {
-    background: #0077b6;
+.sidebar-tabs a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    border: none;
-    padding: 0.75em 1em;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 0.3125em;
-    display: none;
-    /* Hidden on desktop */
+    text-decoration: none;
+    text-align: left; /* Align text to the left */
 }
 
-@media screen and (max-width: 768px) {
-
-    /* Desktop mode */
-    .plan-trip-page main {
-        margin-left: 0;
-        /* Sidebar width */
-        padding-top: 0;
-    }
+.sidebar-tabs a:hover, .sidebar-tabs a.active {
+    background: white;
+    color: var(--primary-color);
 }
 
-@media screen and (min-width: 768px) {
-
-    /* Desktop mode */
-    .plan-trip-page main {
-        margin-left: 16.875em;
-        /* Sidebar width */
-    }
-}
-
-/* Show Menu Button Only on Mobile */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* ===========================
-   🔹 Send Button
-   =========================== */
+/* =====================================================
+   📌 Send Button
+   ===================================================== */
 .btn-send {
-    background: #0077b6;
+    background: var(--primary-color);
     color: white;
-    border: none;
     padding: 1.6em 0.9375em;
-    cursor: pointer;
-    border-radius: 0.3125em;
     margin-left: 1.6em;
 }
 
-/* Itinerary Actions */
-.itinerary-actions {
-    display: flex;
-    margin-left: 1em;
-    gap: 1em;
-}
-
+/* =====================================================
+   📌 View Button
+   ===================================================== */
 .view-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em 1em;
-    background-color: #0077b6;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
-    border: none;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    text-align: center;
-}
-
-.favorite-btn {
-    background: white;
-    border: 0.125em solid #0077b6;
-    color: #0077b6;
-    padding: 0.5em 0.75em;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1em;
-}
-
-.itinerary-list .delete-btn {
-    background: white;
-    border: 0.125em solid #0077b6;
-    color: #0077b6;
-    padding: 0.5em 0.75em;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1em;
+    margin-left: 1em;
 }
 
 .view-btn:hover {
     background: #005f8a;
-    color: white;
+}
+
+/* =====================================================
+   📌 Favorite Button
+   ===================================================== */
+.favorite-btn {
+    background: white;
+    border: 0.125em solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5em 0.75em;
 }
 
 .favorite-btn:hover {
@@ -206,38 +173,29 @@
     color: black;
 }
 
-/* Search, Sort & Filter Container */
-.search-sort-filter-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
+/* =====================================================
+   📌 Back Button
+   ===================================================== */
+.back-btn {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.75em 1em;
+    font-size: 1.2em;
 }
 
-/* Search Bar */
-.search-bar {
-    flex-grow: 1;
-    /* Allows it to expand to fill space */
-    padding: 0.625em;
-    border: 1px solid #ccc;
-    border-radius: 0.3125em;
-    font-size: 1em;
+.back-btn:hover {
+    background: #005f8a;
 }
 
-/* Sort & Filter Buttons */
+/* =====================================================
+   📌 Sort & Filter Buttons
+   ===================================================== */
 .sort-btn,
 .filter-btn {
-    background: #0077b6;
+    background: var(--primary-color);
     color: white;
-    border: none;
     padding: 0.625em 1.25em;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 0.3125em;
-    transition: 0.3s ease-in-out;
 }
 
 .sort-btn:hover,
@@ -245,18 +203,32 @@
     background: #005f8a;
 }
 
-/* Back Button Styles */
-.back-btn {
-    background: #0077b6;
-    color: white;
-    border: none;
-    text-decoration: none;
-    padding: 0.75em 1em;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 0.3125em;
+.sort-filter-buttons {
+    display: flex;
+    gap: 0.5em;
 }
 
-.back-btn:hover {
-    background: #005f8a;
+/* =====================================================
+   📌 Flex Container for Buttons
+   ===================================================== */
+.trip-actions {
+    display: flex;
+    gap: 0.1em; /* Space between buttons */
+}
+
+/* =====================================================
+   📌 Menu Button (Mobile Only)
+   ===================================================== */
+.menu-toggle {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75em 1em;
+    font-size: 1.2em;
+    display: none; /* Hidden on desktop */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 }

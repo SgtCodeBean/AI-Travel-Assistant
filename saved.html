@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saved Itineraries - My Travel Buddy</title>
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/components/buttons.css" />
-    <link rel="stylesheet" href="styles/components/item-lists.css" />
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/components/buttons.css">
+    <link rel="stylesheet" href="styles/components/item-lists.css">
+    <link rel="stylesheet" href="styles/components/forms.css">
   </head>
 
   <body>
@@ -15,7 +16,7 @@
       <div class="header-container">
         <!-- Logo & App Name -->
         <div class="logo-container">
-          <img src="logo.png" alt="AI Travel Assistant Logo" />
+          <img src="logo.png" alt="AI Travel Assistant Logo">
         </div>
         <!-- Navigation Menu -->
         <nav class="nav-menu">
@@ -26,7 +27,7 @@
         </nav>
         <!-- Profile Icon (Top Right) -->
         <div class="profile-menu">
-          <img src="profile-icon.png" alt="User Profile" class="profile-icon" />
+          <img src="profile-icon.png" alt="User Profile" class="profile-icon">
           <div class="dropdown-content">
             <a href="login.html">Sign In</a>
             <a href="register.html">Create Account</a>
@@ -45,18 +46,19 @@
           id="search-bar"
           class="search-bar"
           placeholder="Search itineraries..."
-        />
+       >
 
-        <!-- Sort Button -->
-        <button id="sort-btn" class="sort-btn">Sort ⬍</button>
-
-        <!-- Filter Button -->
-        <button id="filter-btn" class="filter-btn">Filter ⛛</button>
+        <!-- Sort & Filter Buttons -->
+        <div class="sort-filter-buttons">
+          <button id="sort-btn" class="btn sort-btn">Sort ⬍</button>
+          <button id="filter-btn" class="btn filter-btn">Filter ⛛</button>
+        </div>
       </div>
       <!-- Itineraries List -->
       <ul class="itinerary-list">
         <li class="itinerary-item public">
           <div class="itinerary-info">
+            <!-- Itinerary Details -->
             <h3>Trip to Japan</h3>
             <p><b>🌍 Destination:</b> Tokyo, Kyoto, Osaka</p>
             <p><b>📅 Dates:</b> March 15 - March 30</p>
@@ -69,14 +71,15 @@
             </div>
           </div>
           <div class="itinerary-actions">
-            <a href="your-itinerary.html" class="view-btn">View</a>
-            <button class="favorite-btn">❤️</button>
-            <button class="delete-btn">🗑️</button>
+            <a href="your-itinerary.html" class="btn view-btn">View</a>
+            <button class="btn favorite-btn">❤️</button>
+            <button class="btn delete-btn">🗑️</button>
           </div>
         </li>
 
         <li class="itinerary-item public">
           <div class="itinerary-info">
+            <!-- Itinerary Details -->
             <h3>European Adventure</h3>
             <p><b>🌍 Destination:</b> Paris, Rome, Berlin</p>
             <p><b>📅 Dates:</b> July 10 - July 25</p>
@@ -89,23 +92,24 @@
             </div>
           </div>
           <div class="itinerary-actions">
-            <a href="your-itinerary.html" class="view-btn">View</a>
-            <button class="favorite-btn">❤️</button>
-            <button class="delete-btn">🗑️</button>
+            <a href="your-itinerary.html" class="btn view-btn">View</a>
+            <button class="btn favorite-btn">❤️</button>
+            <button class="btn delete-btn">🗑️</button>
           </div>
         </li>
 
         <li class="itinerary-item private">
           <div class="itinerary-info">
+            <!-- Itinerary Details -->
             <h3>Backpacking Southeast Asia</h3>
             <p><b>🌍 Destination:</b> Thailand, Vietnam, Indonesia</p>
             <p><b>📅 Dates:</b> September 5 - October 10</p>
             <p><b>💰 Budget:</b> $1,800</p>
           </div>
           <div class="itinerary-actions">
-            <a href="your-itinerary.html" class="view-btn">View</a>
-            <button class="favorite-btn">❤️</button>
-            <button class="delete-btn">🗑️</button>
+            <a href="your-itinerary.html" class="btn view-btn">View</a>
+            <button class="btn favorite-btn">❤️</button>
+            <button class="btn delete-btn">🗑️</button>
           </div>
         </li>
       </ul>
