@@ -25,12 +25,27 @@
           <a href="list-saved.html">Saved Itineraries</a>
           <a href="list-explore.html">Explore</a>
         </nav>
-        <!-- Profile Icon (Top Right) -->
-        <div class="profile-menu">
-          <img src="images/profile-icon.png" alt="User Profile" class="profile-icon">
-          <div class="dropdown-content">
-            <a href="login.html">Sign In</a>
-            <a href="register.html">Create Account</a>
+        <!-- Search Form -->
+        <div class="header-right">
+          <form action="search-results.html" method="GET" class="search-form">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search trips..."
+              required
+           >
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div class="profile-menu">
+            <img
+              src="images/profile-icon.png"
+              alt="User Profile"
+              class="profile-icon"
+           >
+            <div class="dropdown-content">
+              <a href="login.html">Sign In</a>
+              <a href="register.html">Create Account</a>
+            </div>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/components/sidebar.css">
     <link rel="stylesheet" href="styles/components/itinerary.css">
     <link rel="stylesheet" href="styles/components/item-lists.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="itinerary-page">
     <!-- Header (Logo & Navigation) -->
@@ -25,35 +26,50 @@
           <a href="list-saved.html">Saved Itineraries</a>
           <a href="list-explore.html">Explore</a>
         </nav>
-        <!-- Profile Icon (Top Right) -->
-        <div class="profile-menu">
-          <img src="images/profile-icon.png" alt="User Profile" class="profile-icon">
-          <div class="dropdown-content">
-            <a href="login.html">Sign In</a>
-            <a href="register.html">Create Account</a>
+        <!-- Search Form -->
+        <div class="header-right">
+          <form action="search-results.html" method="GET" class="search-form">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search trips..."
+              required
+           >
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div class="profile-menu">
+            <img
+              src="images/profile-icon.png"
+              alt="User Profile"
+              class="profile-icon"
+           >
+            <div class="dropdown-content">
+              <a href="login.html">Sign In</a>
+              <a href="register.html">Create Account</a>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Sidebar -->
-    <aside class="sidebar">
-      <!-- Trip Details -->
-      <h2>Trip Details</h2>
-      <ul class="sidebar-tabs">
-        <li><a href="#" class="btn active">📍 Itinerary</a></li>
-        <li><a href="#" class="btn">💰 Pricing</a></li>
-        <li><a href="#" class="btn">⚠️ Travel Advisories</a></li>
-        <li><a href="#" class="btn">💡 Tips</a></li>
-      </ul>
-      <!-- Trip Actions -->
-      <h2>Trip Actions</h2>
-      <ul class="sidebar-tabs">
-        <li><a href="#" class="btn">✏️ Edit Itinerary</a></li>
-        <li><a href="#" class="btn">❤️ Favorite</a></li>
-        <li><a href="#" class="btn">💬 Comments</a></li>
-        <li><a href="#" class="btn">🗑️ Delete Itinerary</a></li>
-      </ul>
+    <aside id="itinerary-sidebar" class="sidebar hidden">
+      <div class="sidebar-body">
+        <h2>Trip Details</h2>
+        <ul class="sidebar-tabs">
+          <li><a href="#" class="btn active">📍 Itinerary</a></li>
+          <li><a href="#" class="btn">💰 Pricing</a></li>
+          <li><a href="#" class="btn">⚠️ Travel Advisories</a></li>
+          <li><a href="#" class="btn">💡 Tips</a></li>
+        </ul>
+        <h2>Trip Actions</h2>
+        <ul class="sidebar-tabs">
+          <li><a href="#" class="btn">✏️ Edit Itinerary</a></li>
+          <li><a href="#" class="btn">❤️ Favorite</a></li>
+          <li><a href="#" class="btn">💬 Comments</a></li>
+          <li><a href="#" class="btn">🗑️ Delete Itinerary</a></li>
+        </ul>
+      </div>
     </aside>
 
     <!-- Main Content -->
@@ -65,7 +81,7 @@
         </div>
         <!-- Menu Toggle -->
         <div class="menu-container">
-          <button id="menu-toggle" class="btn menu-toggle">
+          <button class="btn menu-toggle" data-target="#itinerary-sidebar">
             ☰ Menu
           </button>
         </div>
@@ -185,5 +201,6 @@
         <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
       </div>
     </footer>
+    <script src="interactions.js"></script>
   </body>
 </html>

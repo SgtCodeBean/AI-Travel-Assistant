@@ -1,7 +1,7 @@
 /* =====================================================
    📌 Base Button Styles
    ===================================================== */
-   .btn {
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -37,8 +37,10 @@
     color: var(--primary-color);
     padding: 10px;
     margin-bottom: 20px;
-    width: 110px; /* Fixed width */
-    height: 40px; /* Fixed height */
+    width: 110px;
+    /* Fixed width */
+    height: 40px;
+    /* Fixed height */
 }
 
 .new-trip-btn:hover {
@@ -53,10 +55,13 @@
     color: white;
     border-radius: 5px;
     padding: 10px;
-    width: 150px; /* Fixed width */
-    height: 40px; /* Fixed height */
+    width: 150px;
+    /* Fixed width */
+    height: 40px;
+    /* Fixed height */
     margin: 5px 0;
-    display: inline-flex; /* Ensure inline-flex for consistent sizing */
+    display: inline-flex;
+    /* Ensure inline-flex for consistent sizing */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -84,18 +89,21 @@
     background: none;
     color: white;
     font-size: 1.2em;
-    display: inline-flex; /* Ensure inline-flex for consistent sizing */
+    display: inline-flex;
+    /* Ensure inline-flex for consistent sizing */
     align-items: center;
     justify-content: center;
     padding: 0.5em;
 }
 
 .save-btn:hover {
-    color: #00ff00; /* Green for Save */
+    color: #00ff00;
+    /* Green for Save */
 }
 
 .delete-btn:hover {
-    color: #ff4444; /* Red for Delete */
+    color: #ff4444;
+    /* Red for Delete */
 }
 
 .save-icon,
@@ -111,7 +119,8 @@
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Ensure buttons are stacked vertically */
+    flex-direction: column;
+    /* Ensure buttons are stacked vertically */
 }
 
 .sidebar-tabs li {
@@ -125,10 +134,12 @@
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-decoration: none;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
 }
 
-.sidebar-tabs a:hover, .sidebar-tabs a.active {
+.sidebar-tabs a:hover,
+.sidebar-tabs a.active {
     background: white;
     color: var(--primary-color);
 }
@@ -213,7 +224,8 @@
    ===================================================== */
 .trip-actions {
     display: flex;
-    gap: 0.1em; /* Space between buttons */
+    gap: 0.1em;
+    /* Space between buttons */
 }
 
 /* =====================================================
@@ -224,7 +236,8 @@
     color: white;
     padding: 0.75em 1em;
     font-size: 1.2em;
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
 }
 
 @media screen and (max-width: 768px) {

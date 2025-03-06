@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - My Travel Buddy</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/components/buttons.css">
-    <link rel="stylesheet" href="styles/pages/login.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - My Travel Buddy</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
   </head>
-
   <body>
     <!-- Header (Logo & Navigation) -->
     <header>
       <div class="header-container">
         <!-- Logo & App Name -->
         <div class="logo-container">
-          <img src="images/logo.png" alt="AI Travel Assistant Logo">
+          <img src="images/logo.png" alt="AI Travel Assistant Logo" />
         </div>
         <!-- Navigation Menu -->
         <nav class="nav-menu">
@@ -32,7 +30,7 @@
               name="query"
               placeholder="Search trips..."
               required
-           >
+            />
             <button type="submit" class="btn btn-primary">Search</button>
           </form>
           <div class="profile-menu">
@@ -40,7 +38,7 @@
               src="images/profile-icon.png"
               alt="User Profile"
               class="profile-icon"
-           >
+            />
             <div class="dropdown-content">
               <a href="login.html">Sign In</a>
               <a href="register.html">Create Account</a>
@@ -50,47 +48,10 @@
       </div>
     </header>
 
-    <!-- Login Form -->
-    <main class="login-container">
-      <div class="login-box">
-        <h2>Sign In</h2>
-        <form action="dashboard.html" method="POST">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Enter your email"
-         >
-
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            placeholder="Enter your password"
-         >
-
-          <button type="submit" class="btn btn-primary">Login</button>
-
-          <p class="register-link">
-            Don't have an account?
-            <a href="register.html" class="btn btn-secondary">Sign Up</a>
-          </p>
-        </form>
-      </div>
-
-      <!-- Call-to-Action Section -->
-      <div class="cta-section">
-        <h3>Join My Travel Buddy Today!</h3>
-        <p>
-          Discover new destinations, plan your trips, and share your experiences
-          with a community of travelers.
-        </p>
-        <a href="register.html" class="btn btn-primary">Create an Account</a>
-      </div>
+    <!-- Main Content -->
+    <main class="search-results">
+      <h2>Search Results</h2>
+      <div id="results-container"></div>
     </main>
 
     <!-- Footer -->
@@ -99,7 +60,7 @@
         <!-- Navigation Links -->
         <div class="footer-links">
           <a href="home.html">Home</a>
-          <a href="add-create.html">Start Planning</a>
+          <a href="add-create.html">Plan Trip</a>
           <a href="list-explore.html">Explore</a>
           <a href="list-saved.html">Saved Itineraries</a>
         </div>
@@ -116,5 +77,7 @@
         <p class="copyright">© 2024 My Travel Buddy. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="search-results.js"></script>
   </body>
 </html>

@@ -68,8 +68,8 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
 }
 
 /* Logo & App Name */
@@ -88,12 +88,14 @@ header {
 .app-name {
     font-size: 1.8em;
     font-weight: bold;
+    flex-grow: 1;
 }
 
 /* Navigation Menu */
 .nav-menu {
     display: flex;
     gap: 1.25em;
+    flex-grow: 1;
 }
 
 /* Navigation Links */
@@ -109,17 +111,39 @@ header {
     text-decoration: underline;
 }
 
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-form input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-right: 0.5em;
+    height: 2.5em;
+    /* Ensure the input height matches the button height */
+}
+
+.search-form button {
+    padding: 0.5em 1em;
+    height: 2.5em;
+    /* Ensure the button height matches the input height */
+    margin-top: 0em;
+}
+
 /* =====================================================
    🔹 Profile Menu (Top Right)
    ===================================================== */
 /* Profile Menu Container */
 .profile-menu {
     position: relative;
-    display: inline-block;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
-/* Profile Icon (Retrieved from https://www.flaticon.com/free-icon/profile_6522516)*/
 .profile-icon {
     width: 2.5em;
     height: 2.5em;
@@ -127,8 +151,8 @@ header {
     cursor: pointer;
 }
 
-/* Dropdown Menu */
 .dropdown-content {
+    margin-top: 8em;
     display: none;
     position: absolute;
     right: 0;
@@ -140,7 +164,6 @@ header {
     z-index: 100;
 }
 
-/* Dropdown Links */
 .dropdown-content a {
     color: var(--primary-color);
     padding: 0.75em;
@@ -153,7 +176,6 @@ header {
     background-color: #f1f1f1;
 }
 
-/* Show Dropdown on Hover */
 .profile-menu:hover .dropdown-content {
     display: block;
 }
@@ -229,10 +251,21 @@ h2 {
     margin-bottom: 1.25em;
 }
 
+.header-right {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-end;
+    /* Align them to the right */
+    gap: 0.5em;
+    /* Space between form and profile menu (optional) */
+}
+
 /* =====================================================
    🎯 Responsive Design for Mobile
    ===================================================== */
 @media (max-width: 768px) {
+
     /* Center the entire header content */
     header {
         flex-direction: column;
@@ -256,5 +289,71 @@ h2 {
         text-align: center;
         width: 100%;
         padding: 0.5em 0;
+    }
+}
+
+/* =====================================================
+   🔹 Sidebar Styles
+   ===================================================== */
+.sidebar {
+    width: 15.625em;
+    /* Sidebar width */
+    background: #0077b6;
+    /* Sidebar background color */
+    color: white;
+    /* Sidebar text color */
+    position: fixed;
+    /* Fix sidebar position */
+    left: 0;
+    top: 0;
+    /* Stick to the top */
+    height: 100vh;
+    /* Full viewport height */
+    padding: 1.25em;
+    /* Padding inside sidebar */
+    transition: left 0.3s ease;
+    /* Smooth transition for sliding */
+    z-index: 50;
+    /* Ensure it stays above other elements */
+    margin-top: 6em;
+    /* Adjust top margin */
+}
+
+/* Main content adjustment for sidebar */
+.plan-trip-page main {
+    margin-left: 15.625em;
+    /* Prevent overlap with sidebar */
+}
+
+/* =====================================================
+   🎯 Responsive Design for Mobile
+   ===================================================== */
+/* Hide Sidebar on Mobile */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        top: 0;
+        margin-top: 0em;
+        /* Remove margin on mobile */
+        overflow-y: auto;
+        /* Allow scrolling within the sidebar */
+    }
+
+    .sidebar-body {
+        margin-top: 11em;
+    }
+
+    .sidebar.hidden {
+        display: none;
+        /* Hide the element */
+    }
+
+    .plan-trip-page main {
+        margin-left: 0;
+        /* Remove margin on mobile */
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        /* Prevent scrolling on the body */
     }
 }

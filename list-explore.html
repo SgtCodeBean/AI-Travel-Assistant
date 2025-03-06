@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saved Itineraries - My Travel Buddy</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/components/buttons.css">
-    <link rel="stylesheet" href="styles/components/item-lists.css">
-    <link rel="stylesheet" href="styles/components/forms.css">
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
+    <link rel="stylesheet" href="styles/components/item-lists.css" />
+    <link rel="stylesheet" href="styles/components/forms.css" />
   </head>
 
   <body>
@@ -16,7 +16,7 @@
       <div class="header-container">
         <!-- Logo & App Name -->
         <div class="logo-container">
-          <img src="images/logo.png" alt="AI Travel Assistant Logo">
+          <img src="images/logo.png" alt="AI Travel Assistant Logo" />
         </div>
         <!-- Navigation Menu -->
         <nav class="nav-menu">
@@ -25,12 +25,27 @@
           <a href="list-saved.html">Saved Itineraries</a>
           <a href="list-explore.html">Explore</a>
         </nav>
-        <!-- Profile Icon (Top Right) -->
-        <div class="profile-menu">
-          <img src="images/profile-icon.png" alt="User Profile" class="profile-icon">
-          <div class="dropdown-content">
-            <a href="login.html">Sign In</a>
-            <a href="register.html">Create Account</a>
+        <!-- Search Form -->
+        <div class="header-right">
+          <form action="search-results.html" method="GET" class="search-form">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search trips..."
+              required
+            />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div class="profile-menu">
+            <img
+              src="images/profile-icon.png"
+              alt="User Profile"
+              class="profile-icon"
+            />
+            <div class="dropdown-content">
+              <a href="login.html">Sign In</a>
+              <a href="register.html">Create Account</a>
+            </div>
           </div>
         </div>
       </div>
@@ -46,7 +61,7 @@
           id="search-bar"
           class="search-bar"
           placeholder="Search itineraries..."
-       >
+        />
 
         <!-- Sort & Filter Buttons -->
         <div class="sort-filter-buttons">
@@ -105,9 +120,9 @@
             <p><b>💰 Budget:</b> $1,800</p>
 
             <div class="rating">
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <span class="review-count">(115 reviews)</span>
-              </div>
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="review-count">(115 reviews)</span>
+            </div>
           </div>
           <div class="itinerary-actions">
             <a href="details-users-itinerary.html" class="btn view-btn">View</a>
